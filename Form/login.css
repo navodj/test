@@ -1,0 +1,111 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("login.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+* {
+    position: relative;
+    z-index: 2;
+}
+
+.main {
+    width: 350px;
+    height: 550px;
+    background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.589)), url(1.jpg) no-repeat center/cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    overflow: hidden;
+}
+
+#check {
+    display: none;
+}
+
+.signup, .login {
+    width: 100%;
+    height: 100%;
+}
+
+.form-label {
+    color: aliceblue;
+    font-size: 2.3em;
+    text-align: center;
+    display: block;
+    margin: 60px auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+input {
+    width: 80%;
+    height: 40px;
+    background: #e0dede;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: block;
+    font-size: 1em;
+}
+
+button {
+    width: 80%;
+    height: 45px;
+    margin: 20px auto;
+    display: block;
+    color: white;
+    background: #d9534f;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s ease-in;
+}
+
+button:hover {
+    background: #c9302c;
+}
+
+.login {
+    background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.589)),url(2.jpg) no-repeat center/cover;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: transform .8s ease-in-out;
+}
+
+#check:checked ~ .login {
+    transform: translateY(-500px);
+}
+
+#check:checked ~ .login .form-label {
+    transform: scale(1);
+}
+
+#check:checked ~ .signup .form-label {
+    transform: scale(0.6);
+}

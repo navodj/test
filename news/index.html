@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop News & Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    
+    <!-- Hero/Banner Section -->
+    <section class="hero">
+        <div class="navbar">
+            <a href="../index.html">
+                <img src="..\logo.png" class="logo" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="..\index.html">Home</a></li>
+                <li><a href="..\news\index.html">News</a></li>
+                <li><a href="..\shop.php">Shop</a></li>
+                <li><a href="..\form\form.html">Login</a></li>
+            </ul>
+        </div>
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Stay updated with our latest news and events!</p>
+    </section>
+    
+     <!-- Coffee Description Section -->
+     <section class="coffee-info">
+        <h2>Our Specialty Coffees</h2>
+        <p>Discover the rich, aromatic flavors of our expertly crafted coffees. From bold espressos to smooth lattes, every cup is brewed to perfection.</p>
+    </section>
+
+
+    <!-- News & Events Section -->
+    <section class="content">
+        <div class="content-tabs">
+            <button class="tab-btn" onclick="toggleTab('news')">News</button>
+            <button class="tab-btn" onclick="toggleTab('events')">Events</button>
+        </div>
+        
+        <div class="tab-container">
+            <div class="tab-content" id="news">
+                <h2>Latest News</h2>
+                <p>Discover our new products, promotions, and community stories.</p>
+                <!-- News Items -->
+                <div class="news-item">
+                    <img src="coffeenews.1.jpg" alt="New Coffee Product" class="news-img">
+                    <h3>New Product Launch: Vanilla Latte</h3>
+                    <p>Try our latest vanilla latte available now!</p>
+                </div>
+                <div class="news-item">
+                    <img src="coffeenews.2.jpg" alt="Sustainability Efforts" class="news-img">
+                    <h3>Sustainability Efforts</h3>
+                    <p>We're committed to eco-friendly packaging in our shop.</p>
+                </div>
+                <div class="news-item">
+                    <img src="coffeenews.3.jpg" alt="Community Stories" class="news-img">
+                    <h3>Community Stories</h3>
+                    <p>Supporting local artists and events in the community.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="events">
+                <h2>Upcoming Events</h2>
+                <p>Check out our live music nights, coffee tastings, and more.</p>
+                <!-- Event Items -->
+                <div class="event-item">
+                    <img src="coffee.event.1.jpg" alt="Live Music Night" class="event-img">
+                    <h3>Live Music Night</h3>
+                    <p>Join us for an evening of live music and coffee!</p>
+                </div>
+                <div class="event-item">
+                    <img src="coffee.event.2.jpg" alt="Coffee Tasting Event" class="event-img">
+                    <h3>Coffee Tasting Event</h3>
+                    <p>Sample different coffee beans from around the world.</p>
+                </div>
+                <div class="event-item">
+                    <img src="coffee.event.3.jpg" alt="Art Show" class="event-img">
+                    <h3>Local Art Show</h3>
+                    <p>Come and see the works of local artists in our space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>  
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0); /* Transparency for navbar background */
+    z-index: 10; /* Ensure navbar is above other content */
+    position: relative;
+    top: -20px; /* Adjust this value to lift the navbar */
+}
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: chocolate;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 10pxpx 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.685),rgba(0, 0, 0, 0.692)),url('coffee.1.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* News & Events Section */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: #4b2e2b;
+    color: #fff;
+}
+
+/* Container for Tab Contents */
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tab Content Styling */
+.tab-content {
+    display: none;
+    flex: 1;
+    min-width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tab-content p {
+    font-size: 16px;
+}
+
+/* News and Event Items Styling */
+.news-item, .event-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-img, .event-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.news-item h3, .event-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-item p, .event-item p {
+    font-size: 16px;
+    color: #555;
+}
+/* Content Tabs with Background Image */
+.content-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.856),rgba(0, 0, 0, 0.726)),url('coffeeback.1.jpg.jpg') no-repeat center center/cover;
+    padding: 20px;
+    border-radius: 8px;
+}
+/* Coffee Info Section */
+.coffee-info {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.623)),url('coffeeback.2.jpg.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.coffee-info h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}

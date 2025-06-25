@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="text/javascript">
+        function DoValidate() {
+            let inputName = document.myLogin.userName.value;
+            let inputPassword = document.myLogin.pass.value;
+
+            if (inputName == "") {
+                alert("Enter your user name!");
+                return false;
+            }
+            if (inputPassword == "") {
+                alert("Enter your password!");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateSignup() {
+            let userName = document.mySignup.userName.value;
+            let email = document.mySignup.email.value;
+            let password = document.mySignup.pass.value;
+
+            // Validate user name
+            if (userName == "") {
+                alert("Enter a user name!");
+                return false;
+            }
+
+            // Validate email
+            if (email == "") {
+                alert("Enter an email address!");
+                return false;
+            }
+            var atops = email.indexOf("@");
+            var dotops = email.lastIndexOf(".");
+            if (atops < 1 || (dotops - atops < 2)) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            // Validate password
+            if (password == "") {
+                alert("Enter a password!");
+                return false;
+            }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="check" aria-hidden="true">
+
+        <div class="signup">
+            <form name="mySignup" action="DOSignup.php" method="POST" onsubmit="return validateSignup()">
+                <label for="check" aria-hidden="true" class="form-label">Sign up</label>
+                <input type="text" name="userName" placeholder="User name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="pass" placeholder="Password">
+                <button>Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form name="myLogin" action="DoLogin.php" method="POST" onsubmit="return DoValidate()">
+                <label for="check" aria-hidden="true" class="form-label">Login</label>
+                <input type="text" name="userName" placeholder="user name">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
